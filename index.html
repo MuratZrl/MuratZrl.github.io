@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Dev Tier List</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+    color: #fff;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    color: #444;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .tierlist {
+    width: 100%;
+    max-width: 860px;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .tier-row {
+    display: flex;
+    min-height: 80px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .tier-row:last-child { border-bottom: none; }
+
+  .tier-label {
+    width: 80px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #000;
+    flex-shrink: 0;
+  }
+
+  .tier-items {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #111;
+    border-left: 1px solid #1e1e1e;
+  }
+
+  .item {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 3px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    color: #ddd;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .item:hover {
+    border-color: #555;
+    color: #fff;
+  }
+
+  /* S - #ff6b6b */
+  .s .tier-label { background: #ff6b6b; }
+  /* A - #ffa94d */
+  .a .tier-label { background: #ffa94d; }
+  /* B - #ffe066 */
+  .b .tier-label { background: #ffe066; }
+  /* C - #c0eb75 */
+  .c .tier-label { background: #c0eb75; }
+  /* D - #74c0fc */
+  .d .tier-label { background: #74c0fc; }
+  /* F - #888 */
+  .f .tier-label { background: #888; color: #111; }
+
+  .note {
+    margin-top: 28px;
+    color: #333;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Web Dev Tier List</h1>
+<p class="subtitle">Brutally honest · 2024 edition</p>
+
+<div class="tierlist">
+
+  <!-- S TIER -->
+  <div class="tier-row s">
+    <div class="tier-label">S</div>
+    <div class="tier-items">
+      <span class="item">JavaScript (core)</span>
+      <span class="item">TypeScript</span>
+      <span class="item">React</span>
+      <span class="item">HTTP / REST</span>
+      <span class="item">SQL</span>
+      <span class="item">Git</span>
+      <span class="item">CSS (real mastery)</span>
+      <span class="item">Node.js</span>
+    </div>
+  </div>
+
+  <!-- A TIER -->
+  <div class="tier-row a">
+    <div class="tier-label">A</div>
+    <div class="tier-items">
+      <span class="item">Next.js</span>
+      <span class="item">PostgreSQL</span>
+      <span class="item">Docker</span>
+      <span class="item">GraphQL</span>
+      <span class="item">Redis</span>
+      <span class="item">Tailwind CSS</span>
+      <span class="item">Vite</span>
+      <span class="item">Prisma</span>
+      <span class="item">tRPC</span>
+      <span class="item">WebSockets</span>
+      <span class="item">Linux / CLI</span>
+    </div>
+  </div>
+
+  <!-- B TIER -->
+  <div class="tier-row b">
+    <div class="tier-label">B</div>
+    <div class="tier-items">
+      <span class="item">Vue.js</span>
+      <span class="item">Svelte</span>
+      <span class="item">Python (backend)</span>
+      <span class="item">FastAPI</span>
+      <span class="item">Supabase</span>
+      <span class="item">Vercel</span>
+      <span class="item">AWS (basics)</span>
+      <span class="item">Webpack</span>
+      <span class="item">MongoDB</span>
+      <span class="item">Jest / Vitest</span>
+      <span class="item">Figma (dev use)</span>
+    </div>
+  </div>
+
+  <!-- C TIER -->
+  <div class="tier-row c">
+    <div class="tier-label">C</div>
+    <div class="tier-items">
+      <span class="item">Angular</span>
+      <span class="item">Bootstrap</span>
+      <span class="item">jQuery</span>
+      <span class="item">PHP (vanilla)</span>
+      <span class="item">Firebase</span>
+      <span class="item">Gatsby</span>
+      <span class="item">Nuxt.js</span>
+      <span class="item">Sass / SCSS</span>
+      <span class="item">Express.js</span>
+      <span class="item">Heroku</span>
+      <span class="item">Storybook</span>
+    </div>
+  </div>
+
+  <!-- D TIER -->
+  <div class="tier-row d">
+    <div class="tier-label">D</div>
+    <div class="tier-items">
+      <span class="item">Create React App</span>
+      <span class="item">WordPress (dev)</span>
+      <span class="item">Gulp</span>
+      <span class="item">Bower</span>
+      <span class="item">Backbone.js</span>
+      <span class="item">Ruby on Rails</span>
+      <span class="item">Ember.js</span>
+      <span class="item">CoffeeScript</span>
+      <span class="item">Dreamweaver</span>
+    </div>
+  </div>
+
+  <!-- F TIER -->
+  <div class="tier-row f">
+    <div class="tier-label">F</div>
+    <div class="tier-items">
+      <span class="item">Flash / ActionScript</span>
+      <span class="item">Wix Code</span>
+      <span class="item">Squarespace Dev</span>
+      <span class="item">FrontPage</span>
+      <span class="item">XHTML Strict</span>
+      <span class="item">IE-only CSS hacks</span>
+      <span class="item">table-based layouts</span>
+    </div>
+  </div>
+
+</div>
+
+<p class="note">Placement based on market demand, longevity, and actual job utility — not hype</p>
+
+</body>
+</html>
