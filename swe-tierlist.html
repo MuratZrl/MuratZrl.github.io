@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Engineering Tier List</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080808;
+    --surface: #0f0f0f;
+    --border: #1c1c1c;
+    --text: #c8c8c8;
+    --text-dim: #3a3a3a;
+    --s:  #ff4d4d;
+    --a:  #ff8c42;
+    --b:  #ffd166;
+    --c:  #a8d672;
+    --d:  #4ecdc4;
+    --e:  #74b9ff;
+    --f:  #a29bfe;
+    --g:  #636e72;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--text);
+    min-height: 100vh;
+    padding: 50px 24px 80px;
+  }
+
+  header {
+    max-width: 1100px;
+    margin: 0 auto 48px;
+    border-left: 4px solid var(--s);
+    padding-left: 20px;
+  }
+
+  header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    letter-spacing: 4px;
+    color: #fff;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  header p {
+    margin-top: 8px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  .section {
+    max-width: 1100px;
+    margin: 0 auto 48px;
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tier-row {
+    display: flex;
+    min-height: 72px;
+    border: 1px solid var(--border);
+    border-bottom: none;
+  }
+
+  .tier-row:last-child { border-bottom: 1px solid var(--border); }
+
+  .tier-label {
+    width: 64px;
+    min-width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    color: #000;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .tier-label::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 10%; bottom: 10%;
+    width: 1px;
+    background: rgba(0,0,0,0.2);
+  }
+
+  .tier-items {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: var(--surface);
+  }
+
+  .item {
+    background: #161616;
+    border: 1px solid #222;
+    border-radius: 2px;
+    padding: 5px 12px;
+    font-size: 0.72rem;
+    color: #bbb;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.15s;
+    cursor: default;
+  }
+
+  .item:hover { background: #1e1e1e; border-color: #444; color: #fff; }
+
+  .s .tier-label  { background: var(--s); }
+  .a .tier-label  { background: var(--a); }
+  .b .tier-label  { background: var(--b); }
+  .c .tier-label  { background: var(--c); }
+  .d .tier-label  { background: var(--d); }
+  .e .tier-label  { background: var(--e); }
+  .f .tier-label  { background: var(--f); color: #fff; }
+  .g .tier-label  { background: var(--g); }
+
+  footer {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    font-size: 0.62rem;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Software Engineering<br>Tier List</h1>
+  <p>Brutally honest · 2026 edition · All domains covered</p>
+</header>
+
+<!-- LANGUAGES -->
+<div class="section">
+  <div class="section-title">// Programming Languages</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Python</span><span class="item">TypeScript</span><span class="item">Rust</span><span class="item">Go</span><span class="item">C++</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">JavaScript</span><span class="item">Java</span><span class="item">C#</span><span class="item">Kotlin</span><span class="item">Swift</span><span class="item">C</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Scala</span><span class="item">Elixir</span><span class="item">Haskell</span><span class="item">Zig</span><span class="item">Dart</span><span class="item">Ruby</span><span class="item">PHP</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Lua</span><span class="item">R</span><span class="item">Julia</span><span class="item">Clojure</span><span class="item">F#</span><span class="item">Groovy</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Perl</span><span class="item">MATLAB</span><span class="item">Objective-C</span><span class="item">CoffeeScript</span><span class="item">VB.NET</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">COBOL</span><span class="item">Fortran</span><span class="item">ActionScript</span><span class="item">Pascal</span><span class="item">BASIC</span></div></div>
+</div>
+
+<!-- FRONTEND -->
+<div class="section">
+  <div class="section-title">// Frontend</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">React</span><span class="item">TypeScript</span><span class="item">CSS Mastery</span><span class="item">Vite</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Next.js</span><span class="item">Tailwind CSS</span><span class="item">Svelte</span><span class="item">Vue 3</span><span class="item">Zustand</span><span class="item">TanStack Query</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Nuxt.js</span><span class="item">SvelteKit</span><span class="item">Remix</span><span class="item">Astro</span><span class="item">Redux Toolkit</span><span class="item">Framer Motion</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Angular</span><span class="item">Bootstrap</span><span class="item">Webpack</span><span class="item">Sass</span><span class="item">Storybook</span><span class="item">Gatsby</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">jQuery</span><span class="item">Backbone.js</span><span class="item">Ember.js</span><span class="item">Create React App</span><span class="item">MooTools</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">Flash/AS3</span><span class="item">Dreamweaver</span><span class="item">FrontPage</span><span class="item">Table layouts</span></div></div>
+</div>
+
+<!-- BACKEND -->
+<div class="section">
+  <div class="section-title">// Backend</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Node.js</span><span class="item">Go (net/http)</span><span class="item">Rust (Axum)</span><span class="item">PostgreSQL</span><span class="item">Redis</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">FastAPI</span><span class="item">Django</span><span class="item">Spring Boot</span><span class="item">ASP.NET Core</span><span class="item">GraphQL</span><span class="item">gRPC</span><span class="item">tRPC</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Express.js</span><span class="item">NestJS</span><span class="item">Laravel</span><span class="item">Flask</span><span class="item">Hono</span><span class="item">Prisma</span><span class="item">Drizzle ORM</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Ruby on Rails</span><span class="item">Symfony</span><span class="item">Strapi</span><span class="item">Fastify</span><span class="item">Sequelize</span><span class="item">TypeORM</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Meteor.js</span><span class="item">Sails.js</span><span class="item">Hapi.js</span><span class="item">LoopBack</span><span class="item">Feathers.js</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">SOAP</span><span class="item">XML-RPC</span><span class="item">CGI scripts</span><span class="item">Zend Framework 1</span></div></div>
+</div>
+
+<!-- DATABASES -->
+<div class="section">
+  <div class="section-title">// Databases</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">PostgreSQL</span><span class="item">Redis</span><span class="item">SQLite</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">MySQL</span><span class="item">ClickHouse</span><span class="item">Elasticsearch</span><span class="item">Cassandra</span><span class="item">CockroachDB</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">MongoDB</span><span class="item">DynamoDB</span><span class="item">Supabase</span><span class="item">PlanetScale</span><span class="item">Neon</span><span class="item">TimescaleDB</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Firebase Firestore</span><span class="item">FaunaDB</span><span class="item">CouchDB</span><span class="item">Neo4j</span><span class="item">Airtable</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Microsoft Access</span><span class="item">dBASE</span><span class="item">Realm (old)</span><span class="item">RethinkDB</span></div></div>
+</div>
+
+<!-- DEVOPS & CLOUD -->
+<div class="section">
+  <div class="section-title">// DevOps & Cloud</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Docker</span><span class="item">Kubernetes</span><span class="item">Terraform</span><span class="item">GitHub Actions</span><span class="item">Linux</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">AWS (core)</span><span class="item">GCP</span><span class="item">Prometheus</span><span class="item">Grafana</span><span class="item">Ansible</span><span class="item">Helm</span><span class="item">Nginx</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Azure</span><span class="item">Vercel</span><span class="item">Pulumi</span><span class="item">GitLab CI</span><span class="item">ArgoCD</span><span class="item">Vault</span><span class="item">Datadog</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Heroku</span><span class="item">CircleCI</span><span class="item">Jenkins</span><span class="item">Netlify</span><span class="item">Render</span><span class="item">TravisCI</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Bamboo</span><span class="item">TeamCity</span><span class="item">FTP deployment</span><span class="item">cPanel</span></div></div>
+</div>
+
+<!-- AI / ML -->
+<div class="section">
+  <div class="section-title">// AI / Machine Learning</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">PyTorch</span><span class="item">Transformers (HF)</span><span class="item">LangChain</span><span class="item">OpenAI API</span><span class="item">CUDA</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">TensorFlow</span><span class="item">scikit-learn</span><span class="item">vLLM</span><span class="item">LlamaIndex</span><span class="item">Weights & Biases</span><span class="item">Pandas</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Keras</span><span class="item">XGBoost</span><span class="item">MLflow</span><span class="item">Ray</span><span class="item">Ollama</span><span class="item">Pinecone</span><span class="item">NumPy</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Weka</span><span class="item">RapidMiner</span><span class="item">Azure ML Studio</span><span class="item">AutoML tools</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Caffe (old)</span><span class="item">Theano</span><span class="item">CNTK</span></div></div>
+</div>
+
+<!-- MOBILE -->
+<div class="section">
+  <div class="section-title">// Mobile Development</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Swift (iOS native)</span><span class="item">Kotlin (Android native)</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">React Native</span><span class="item">Flutter</span><span class="item">Jetpack Compose</span><span class="item">SwiftUI</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Expo</span><span class="item">Capacitor</span><span class="item">Tauri (mobile)</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Ionic</span><span class="item">Xamarin</span><span class="item">NativeScript</span><span class="item">PWA</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">PhoneGap/Cordova</span><span class="item">Titanium</span><span class="item">Windows Phone SDK</span></div></div>
+</div>
+
+<!-- TESTING -->
+<div class="section">
+  <div class="section-title">// Testing</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Vitest</span><span class="item">Jest</span><span class="item">Playwright</span><span class="item">pytest</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Cypress</span><span class="item">Testing Library</span><span class="item">k6</span><span class="item">JUnit 5</span><span class="item">Pact (contract)</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Mocha</span><span class="item">Selenium</span><span class="item">Postman</span><span class="item">Stryker</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Karma</span><span class="item">Jasmine</span><span class="item">QUnit</span><span class="item">TestNG</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Manual testing only</span><span class="item">No tests at all</span></div></div>
+</div>
+
+<!-- CS FUNDAMENTALS -->
+<div class="section">
+  <div class="section-title">// CS Fundamentals & Concepts</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Data Structures</span><span class="item">Algorithms</span><span class="item">System Design</span><span class="item">Networking (TCP/IP)</span><span class="item">OS concepts</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Design Patterns</span><span class="item">Distributed Systems</span><span class="item">Concurrency</span><span class="item">Database Internals</span><span class="item">Security basics</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Compilers</span><span class="item">SOLID principles</span><span class="item">DDD</span><span class="item">Event Sourcing</span><span class="item">CQRS</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">UML diagrams</span><span class="item">Formal methods</span><span class="item">Automata theory</span></div></div>
+</div>
+
+<!-- TOOLS -->
+<div class="section">
+  <div class="section-title">// Tools & Workflow</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Git</span><span class="item">Neovim / VSCode</span><span class="item">Linux CLI</span><span class="item">SSH</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">tmux</span><span class="item">GitHub</span><span class="item">Jira</span><span class="item">Figma (dev)</span><span class="item">Postman</span><span class="item">Make/Just</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Notion</span><span class="item">Linear</span><span class="item">Slack</span><span class="item">Obsidian</span><span class="item">GitLab</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Trello</span><span class="item">Bitbucket</span><span class="item">SVN</span><span class="item">IntelliJ</span><span class="item">Eclipse</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Notepad++</span><span class="item">FTP clients</span><span class="item">CVS</span><span class="item">SourceSafe</span></div></div>
+</div>
+
+<footer>Placement based on market demand, longevity & real-world utility — not hype</footer>
+
+</body>
+</html>
