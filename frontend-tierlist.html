@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend Development Tier List</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060910;
+    --surface: #0c0f16;
+    --border: #181d28;
+    --text: #b0bec5;
+    --dim: #2e3a47;
+    --s: #f72585;
+    --a: #ff6d00;
+    --b: #ffd60a;
+    --c: #06d6a0;
+    --d: #4cc9f0;
+    --e: #7b5ea7;
+    --f: #444;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    font-family: 'Fira Code', monospace;
+    color: var(--text);
+    min-height: 100vh;
+    padding: 56px 24px 90px;
+  }
+
+  header {
+    max-width: 1140px;
+    margin: 0 auto 52px;
+    position: relative;
+    padding-bottom: 24px;
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 80px; height: 3px;
+    background: linear-gradient(90deg, var(--s), var(--a));
+  }
+
+  header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(2.6rem, 5.5vw, 5rem);
+    letter-spacing: 3px;
+    color: #fff;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  header h1 span { color: var(--s); }
+
+  header p {
+    margin-top: 12px;
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    color: var(--dim);
+    text-transform: uppercase;
+  }
+
+  .section {
+    max-width: 1140px;
+    margin: 0 auto 44px;
+  }
+
+  .section-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .tier-row {
+    display: flex;
+    min-height: 70px;
+    border: 1px solid var(--border);
+    border-bottom: none;
+    transition: background 0.1s;
+  }
+
+  .tier-row:last-child { border-bottom: 1px solid var(--border); }
+  .tier-row:hover { background: #0e1118; }
+
+  .tier-label {
+    width: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    flex-shrink: 0;
+  }
+
+  .tier-items {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 14px;
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+  }
+
+  .item {
+    background: #10141e;
+    border: 1px solid #1e2535;
+    border-radius: 2px;
+    padding: 4px 11px;
+    font-size: 0.7rem;
+    color: #9aa5b4;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    transition: all 0.15s;
+    cursor: default;
+  }
+
+  .item:hover { background: #181f2e; border-color: #3a4a60; color: #e0e8f0; }
+
+  .s .tier-label { background: var(--s); }
+  .a .tier-label { background: var(--a); }
+  .b .tier-label { background: var(--b); color: #111; }
+  .c .tier-label { background: var(--c); }
+  .d .tier-label { background: var(--d); }
+  .e .tier-label { background: var(--e); color: #eee; }
+  .f .tier-label { background: var(--f); color: #aaa; }
+
+  footer {
+    max-width: 1140px;
+    margin: 44px auto 0;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--dim);
+    text-transform: uppercase;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Frontend<br><span>Development</span><br>Tier List</h1>
+  <p>Brutally honest · 2026 edition · Every domain covered</p>
+</header>
+
+<!-- CORE FUNDAMENTALS -->
+<div class="section">
+  <div class="section-title">// Core Fundamentals</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">HTML semantics</span><span class="item">CSS (deep mastery)</span><span class="item">JavaScript (vanilla)</span><span class="item">TypeScript</span><span class="item">Browser DevTools</span><span class="item">Accessibility (a11y)</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">DOM manipulation</span><span class="item">Event loop</span><span class="item">Fetch / async-await</span><span class="item">Web APIs</span><span class="item">Responsive design</span><span class="item">CSS Grid</span><span class="item">Flexbox</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">CSS custom properties</span><span class="item">CSS animations</span><span class="item">Web Workers</span><span class="item">Service Workers</span><span class="item">Canvas API</span><span class="item">WebGL basics</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">CSS Houdini</span><span class="item">Web Components</span><span class="item">Shadow DOM</span><span class="item">IndexedDB</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">Table layouts</span><span class="item">inline styles everywhere</span><span class="item">!important abuse</span><span class="item">deprecated HTML tags</span></div></div>
+</div>
+
+<!-- FRAMEWORKS & LIBRARIES -->
+<div class="section">
+  <div class="section-title">// Frameworks & Libraries</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">React 19</span><span class="item">Next.js 15</span><span class="item">TypeScript</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Svelte 5</span><span class="item">SvelteKit</span><span class="item">Vue 3</span><span class="item">Nuxt 3</span><span class="item">Astro</span><span class="item">Remix</span><span class="item">Solid.js</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Qwik</span><span class="item">Lit</span><span class="item">Alpine.js</span><span class="item">HTMX</span><span class="item">Preact</span><span class="item">11ty</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Angular 17+</span><span class="item">Gatsby</span><span class="item">Nuxt 2</span><span class="item">Vue 2</span><span class="item">Stencil</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">jQuery</span><span class="item">Backbone.js</span><span class="item">Ember.js</span><span class="item">Knockout.js</span><span class="item">Mithril</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">AngularJS (1.x)</span><span class="item">Polymer</span><span class="item">CoffeeScript</span><span class="item">Create React App</span></div></div>
+</div>
+
+<!-- STYLING -->
+<div class="section">
+  <div class="section-title">// Styling</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Tailwind CSS</span><span class="item">CSS Modules</span><span class="item">Vanilla CSS (expert)</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">CSS-in-JS (Linaria)</span><span class="item">UnoCSS</span><span class="item">Panda CSS</span><span class="item">shadcn/ui</span><span class="item">Radix UI</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Styled Components</span><span class="item">Emotion</span><span class="item">Sass/SCSS</span><span class="item">Stitches</span><span class="item">CVA</span><span class="item">clsx</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Bootstrap 5</span><span class="item">Material UI</span><span class="item">Ant Design</span><span class="item">Chakra UI</span><span class="item">Less</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Bootstrap 3/4</span><span class="item">Foundation</span><span class="item">Bulma</span><span class="item">Semantic UI</span><span class="item">JSS</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">Inline styles</span><span class="item">StyleX (Meta)</span><span class="item">Aphrodite</span></div></div>
+</div>
+
+<!-- STATE MANAGEMENT -->
+<div class="section">
+  <div class="section-title">// State Management</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Zustand</span><span class="item">TanStack Query</span><span class="item">React built-in (useState/useReducer)</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Jotai</span><span class="item">Valtio</span><span class="item">SWR</span><span class="item">Redux Toolkit</span><span class="item">Pinia (Vue)</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Recoil</span><span class="item">XState</span><span class="item">Nanostores</span><span class="item">Legend State</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">MobX</span><span class="item">Vuex</span><span class="item">Redux (classic)</span><span class="item">Context API (overused)</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Redux + Saga + Thunk</span><span class="item">Flux</span><span class="item">Reflux</span><span class="item">Alt.js</span></div></div>
+</div>
+
+<!-- BUILD TOOLS -->
+<div class="section">
+  <div class="section-title">// Build Tools & Bundlers</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Vite</span><span class="item">esbuild</span><span class="item">Turbopack</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Rollup</span><span class="item">SWC</span><span class="item">Bun</span><span class="item">tsup</span><span class="item">Biome</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Webpack 5</span><span class="item">Parcel</span><span class="item">ESLint</span><span class="item">Prettier</span><span class="item">Babel</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Webpack 4</span><span class="item">Snowpack</span><span class="item">Rome (dead)</span><span class="item">TSC only</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Gulp</span><span class="item">Grunt</span><span class="item">Browserify</span><span class="item">Bower</span><span class="item">Require.js</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">Manual concatenation</span><span class="item">No build tool</span><span class="item">CDN-only scripts</span></div></div>
+</div>
+
+<!-- ANIMATION -->
+<div class="section">
+  <div class="section-title">// Animation & Motion</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">CSS animations (native)</span><span class="item">Framer Motion</span><span class="item">GSAP</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Motion One</span><span class="item">React Spring</span><span class="item">Lottie</span><span class="item">Three.js</span><span class="item">Web Animations API</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Anime.js</span><span class="item">Popmotion</span><span class="item">AutoAnimate</span><span class="item">React Transition Group</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Velocity.js</span><span class="item">Mo.js</span><span class="item">Vivus</span><span class="item">CSS Animate (library)</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">jQuery animate()</span><span class="item">Flash animations</span><span class="item">GIF-based animation</span></div></div>
+</div>
+
+<!-- TESTING -->
+<div class="section">
+  <div class="section-title">// Testing</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Vitest</span><span class="item">Playwright</span><span class="item">Testing Library</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Jest</span><span class="item">Cypress</span><span class="item">MSW (mock)</span><span class="item">Storybook</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Mocha + Chai</span><span class="item">Puppeteer</span><span class="item">Percy (visual)</span><span class="item">Chromatic</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Karma</span><span class="item">Jasmine</span><span class="item">QUnit</span><span class="item">Enzyme (dead)</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">No tests</span><span class="item">Manual browser testing only</span></div></div>
+</div>
+
+<!-- PERFORMANCE -->
+<div class="section">
+  <div class="section-title">// Performance</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Core Web Vitals</span><span class="item">Code splitting</span><span class="item">Lazy loading</span><span class="item">Image optimization</span><span class="item">SSR / SSG</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Bundle analysis</span><span class="item">Tree shaking</span><span class="item">CDN strategy</span><span class="item">HTTP/2 & HTTP/3</span><span class="item">Caching headers</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Virtual scrolling</span><span class="item">Web Workers</span><span class="item">Critical CSS</span><span class="item">Resource hints</span><span class="item">Prefetch/preload</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Lighthouse only</span><span class="item">PageSpeed insights</span><span class="item">Basic minification</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">No optimization at all</span><span class="item">10MB bundle</span><span class="item">Uncompressed images</span><span class="item">Render-blocking scripts</span></div></div>
+</div>
+
+<!-- DATA FETCHING -->
+<div class="section">
+  <div class="section-title">// Data Fetching & APIs</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">TanStack Query</span><span class="item">Fetch API (native)</span><span class="item">tRPC</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">SWR</span><span class="item">Axios</span><span class="item">GraphQL + urql</span><span class="item">Apollo Client</span><span class="item">Ky</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">React Query v3</span><span class="item">RTK Query</span><span class="item">ofetch</span><span class="item">ohmyfetch</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Relay</span><span class="item">Superagent</span><span class="item">Got</span><span class="item">node-fetch</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">XMLHttpRequest</span><span class="item">jQuery AJAX</span><span class="item">JSONP</span></div></div>
+</div>
+
+<!-- TOOLING & DX -->
+<div class="section">
+  <div class="section-title">// Tooling & Developer Experience</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">VSCode</span><span class="item">Git</span><span class="item">Chrome DevTools</span><span class="item">TypeScript strict mode</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Neovim</span><span class="item">Cursor</span><span class="item">ESLint + Prettier</span><span class="item">Husky</span><span class="item">lint-staged</span><span class="item">Turborepo</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">pnpm</span><span class="item">Nx monorepo</span><span class="item">Changesets</span><span class="item">Figma Dev Mode</span><span class="item">Biome</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">npm (slow)</span><span class="item">Yarn classic</span><span class="item">WebStorm</span><span class="item">Lerna</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Notepad++</span><span class="item">Dreamweaver</span><span class="item">No linting</span><span class="item">No version control</span></div></div>
+</div>
+
+<footer>Placement based on market demand, real-world utility & longevity — not Twitter hype</footer>
+
+</body>
+</html>
