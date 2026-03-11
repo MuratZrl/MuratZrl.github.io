@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backend Development Tier List</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #050708;
+    --surface: #0a0c0f;
+    --border: #141820;
+    --text: #a8b5c0;
+    --dim: #252f3a;
+    --s: #00ff9d;
+    --a: #00cfff;
+    --b: #a78bfa;
+    --c: #fbbf24;
+    --d: #fb923c;
+    --e: #f87171;
+    --f: #4b5563;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    font-family: 'Source Code Pro', monospace;
+    color: var(--text);
+    min-height: 100vh;
+    padding: 56px 24px 90px;
+  }
+
+  header {
+    max-width: 1140px;
+    margin: 0 auto 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-tag {
+    font-size: 0.62rem;
+    letter-spacing: 5px;
+    color: var(--s);
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  header h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  header h1 em {
+    font-style: normal;
+    -webkit-text-stroke: 1px var(--s);
+    color: transparent;
+  }
+
+  header p {
+    font-size: 0.63rem;
+    letter-spacing: 3px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .section {
+    max-width: 1140px;
+    margin: 0 auto 44px;
+  }
+
+  .section-title {
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title::before {
+    content: '▸';
+    color: var(--s);
+    opacity: 0.6;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .tier-row {
+    display: flex;
+    min-height: 68px;
+    border: 1px solid var(--border);
+    border-bottom: none;
+  }
+
+  .tier-row:last-child { border-bottom: 1px solid var(--border); }
+  .tier-row:hover .tier-items { background: #0d1018; }
+
+  .tier-label {
+    width: 62px;
+    min-width: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #000;
+    flex-shrink: 0;
+  }
+
+  .tier-items {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 14px;
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  .item {
+    background: #0f1318;
+    border: 1px solid #1a2030;
+    border-radius: 2px;
+    padding: 4px 11px;
+    font-size: 0.7rem;
+    color: #8a9ab0;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    transition: all 0.15s;
+    cursor: default;
+  }
+
+  .item:hover { background: #161d28; border-color: #2e4060; color: #d0dce8; }
+
+  .s .tier-label { background: var(--s); }
+  .a .tier-label { background: var(--a); }
+  .b .tier-label { background: var(--b); color: #fff; }
+  .c .tier-label { background: var(--c); color: #111; }
+  .d .tier-label { background: var(--d); color: #111; }
+  .e .tier-label { background: var(--e); color: #fff; }
+  .f .tier-label { background: var(--f); color: #ccc; }
+
+  footer {
+    max-width: 1140px;
+    margin: 44px auto 0;
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    color: var(--dim);
+    text-transform: uppercase;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="header-tag">// tier list</span>
+  <h1>Backend<br><em>Development</em></h1>
+  <p>Brutally honest · 2026 edition · Every domain covered</p>
+</header>
+
+<!-- LANGUAGES -->
+<div class="section">
+  <div class="section-title">Languages</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Go</span><span class="item">Rust</span><span class="item">Python</span><span class="item">TypeScript (Node)</span><span class="item">C++</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Java</span><span class="item">C#</span><span class="item">Kotlin</span><span class="item">Elixir</span><span class="item">Scala</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">PHP 8+</span><span class="item">Ruby</span><span class="item">Swift (server)</span><span class="item">Haskell</span><span class="item">Zig</span><span class="item">Nim</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Lua</span><span class="item">Groovy</span><span class="item">Clojure</span><span class="item">F#</span><span class="item">Erlang</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Perl</span><span class="item">Cold Fusion</span><span class="item">VB.NET</span><span class="item">Classic ASP</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">COBOL</span><span class="item">Fortran</span><span class="item">RPG</span><span class="item">4GL</span></div></div>
+</div>
+
+<!-- FRAMEWORKS -->
+<div class="section">
+  <div class="section-title">Frameworks</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">FastAPI</span><span class="item">Axum (Rust)</span><span class="item">Go stdlib (net/http)</span><span class="item">ASP.NET Core</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Django</span><span class="item">Spring Boot</span><span class="item">NestJS</span><span class="item">Hono</span><span class="item">Elysia (Bun)</span><span class="item">Phoenix (Elixir)</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Express.js</span><span class="item">Fastify</span><span class="item">Laravel</span><span class="item">Flask</span><span class="item">Actix-web</span><span class="item">Gin (Go)</span><span class="item">Fiber (Go)</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Ruby on Rails</span><span class="item">Symfony</span><span class="item">Koa.js</span><span class="item">Tornado</span><span class="item">Play (Scala)</span><span class="item">Ktor</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Sails.js</span><span class="item">Hapi.js</span><span class="item">Loopback</span><span class="item">Feathers.js</span><span class="item">Adonis.js</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">Meteor.js</span><span class="item">Strapi (custom logic)</span><span class="item">Zend Framework 1</span><span class="item">CodeIgniter 3</span></div></div>
+</div>
+
+<!-- DATABASES - RELATIONAL -->
+<div class="section">
+  <div class="section-title">Databases — Relational</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">PostgreSQL</span><span class="item">SQLite</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">MySQL 8+</span><span class="item">CockroachDB</span><span class="item">TiDB</span><span class="item">MariaDB</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">PlanetScale</span><span class="item">Neon</span><span class="item">Supabase (Postgres)</span><span class="item">AWS Aurora</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Oracle DB</span><span class="item">DB2</span><span class="item">SQL Server</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Microsoft Access</span><span class="item">MySQL 5.6</span><span class="item">Sybase</span></div></div>
+</div>
+
+<!-- DATABASES - NoSQL -->
+<div class="section">
+  <div class="section-title">Databases — NoSQL</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Redis</span><span class="item">ClickHouse</span><span class="item">Elasticsearch</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Cassandra</span><span class="item">ScyllaDB</span><span class="item">DynamoDB</span><span class="item">MongoDB 6+</span><span class="item">Dragonfly</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Neo4j</span><span class="item">TimescaleDB</span><span class="item">InfluxDB</span><span class="item">Couchbase</span><span class="item">Meilisearch</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">CouchDB</span><span class="item">Firebase Firestore</span><span class="item">Fauna</span><span class="item">Upstash</span><span class="item">Typesense</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">RethinkDB</span><span class="item">RavenDB</span><span class="item">OrientDB</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">XML flat files</span><span class="item">JSON files as DB</span><span class="item">Google Sheets as DB</span></div></div>
+</div>
+
+<!-- ORMs -->
+<div class="section">
+  <div class="section-title">ORMs & Query Builders</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Raw SQL (expert)</span><span class="item">Prisma</span><span class="item">Drizzle ORM</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">SQLAlchemy</span><span class="item">GORM (Go)</span><span class="item">Hibernate</span><span class="item">Entity Framework Core</span><span class="item">Diesel (Rust)</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Knex.js</span><span class="item">Kysely</span><span class="item">TypeORM</span><span class="item">Active Record (Rails)</span><span class="item">Eloquent</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Sequelize</span><span class="item">Bookshelf.js</span><span class="item">Objection.js</span><span class="item">Mikro ORM</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Waterline</span><span class="item">Mongoose (overused)</span><span class="item">Caminte</span></div></div>
+</div>
+
+<!-- API DESIGN -->
+<div class="section">
+  <div class="section-title">API Design & Protocols</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">REST (well-designed)</span><span class="item">gRPC</span><span class="item">tRPC</span><span class="item">WebSockets</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">GraphQL</span><span class="item">OpenAPI / Swagger</span><span class="item">Server-Sent Events</span><span class="item">MQTT</span><span class="item">WebRTC</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">JSON:API spec</span><span class="item">AMQP</span><span class="item">HTTP/2</span><span class="item">JSON-RPC</span><span class="item">Webhook patterns</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">GraphQL (overengineered)</span><span class="item">OData</span><span class="item">Falcor</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">SOAP</span><span class="item">XML-RPC</span><span class="item">WSDL</span><span class="item">REST with no versioning</span></div></div>
+</div>
+
+<!-- MESSAGE QUEUES -->
+<div class="section">
+  <div class="section-title">Message Queues & Event Streaming</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Apache Kafka</span><span class="item">Redis Streams</span><span class="item">NATS</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">RabbitMQ</span><span class="item">AWS SQS / SNS</span><span class="item">Google Pub/Sub</span><span class="item">Pulsar</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">BullMQ</span><span class="item">Sidekiq</span><span class="item">Celery</span><span class="item">ActiveMQ</span><span class="item">Azure Service Bus</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Amazon Kinesis</span><span class="item">IronMQ</span><span class="item">Beanstalkd</span></div></div>
+  <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items"><span class="item">Polling DB as queue</span><span class="item">Cron job hacks</span><span class="item">Email as queue</span></div></div>
+</div>
+
+<!-- AUTH & SECURITY -->
+<div class="section">
+  <div class="section-title">Auth & Security</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">JWT (done right)</span><span class="item">OAuth 2.0</span><span class="item">OpenID Connect</span><span class="item">bcrypt / Argon2</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Clerk</span><span class="item">Auth0</span><span class="item">Keycloak</span><span class="item">Supabase Auth</span><span class="item">Passkeys (WebAuthn)</span><span class="item">mTLS</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">NextAuth.js</span><span class="item">Passport.js</span><span class="item">Firebase Auth</span><span class="item">RBAC patterns</span><span class="item">API key rotation</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Session cookies (basic)</span><span class="item">HTTP Basic Auth</span><span class="item">LDAP</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">MD5 passwords</span><span class="item">Plain text passwords</span><span class="item">No auth at all</span><span class="item">JWT in localStorage</span></div></div>
+</div>
+
+<!-- CACHING -->
+<div class="section">
+  <div class="section-title">Caching Strategies</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Redis</span><span class="item">CDN caching</span><span class="item">HTTP cache headers</span><span class="item">In-memory LRU</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Memcached</span><span class="item">Dragonfly</span><span class="item">Varnish</span><span class="item">Read-through cache</span><span class="item">Write-through cache</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Database query cache</span><span class="item">Cloudflare Workers KV</span><span class="item">Upstash Redis</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">File-based caching</span><span class="item">ETag only</span><span class="item">Application-level only</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">No caching</span><span class="item">Cache everything forever</span><span class="item">Stale data served blindly</span></div></div>
+</div>
+
+<!-- ARCHITECTURE -->
+<div class="section">
+  <div class="section-title">Architecture Patterns</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Clean Architecture</span><span class="item">Event-Driven</span><span class="item">CQRS</span><span class="item">Hexagonal</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Microservices (justified)</span><span class="item">Domain-Driven Design</span><span class="item">Event Sourcing</span><span class="item">BFF pattern</span><span class="item">Saga pattern</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">Monolith (well-structured)</span><span class="item">Modular monolith</span><span class="item">Serverless</span><span class="item">Repository pattern</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">MVC (basic)</span><span class="item">Layered architecture</span><span class="item">Microservices (premature)</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">Spaghetti code</span><span class="item">God objects</span><span class="item">No architecture</span><span class="item">Business logic in routes</span></div></div>
+</div>
+
+<!-- OBSERVABILITY -->
+<div class="section">
+  <div class="section-title">Observability & Monitoring</div>
+  <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items"><span class="item">Prometheus</span><span class="item">Grafana</span><span class="item">OpenTelemetry</span><span class="item">Structured logging</span></div></div>
+  <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items"><span class="item">Datadog</span><span class="item">Sentry</span><span class="item">Jaeger (tracing)</span><span class="item">Loki</span><span class="item">PagerDuty</span></div></div>
+  <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items"><span class="item">New Relic</span><span class="item">CloudWatch</span><span class="item">Elastic Stack (ELK)</span><span class="item">Honeycomb</span></div></div>
+  <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items"><span class="item">Pingdom</span><span class="item">Uptime Robot</span><span class="item">Basic health checks</span></div></div>
+  <div class="tier-row f"><div class="tier-label">F</div><div class="tier-items"><span class="item">No monitoring</span><span class="item">console.log only</span><span class="item">Users report bugs</span></div></div>
+</div>
+
+<footer>Placement based on industry adoption, performance, and real production utility — not hype</footer>
+
+</body>
+</html>
