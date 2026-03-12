@@ -3,7 +3,7 @@ A collection of brutally honest tier lists for software engineering topics.
 
 ## Web Dev Tier List
 [![Web Dev Tier List Preview](preview.png)](https://MuratZrl.github.io/web-dev.html)
-> Live → [MuratZrl.github.io](https://MuratZrl.github.io/web-dev.html)
+> Live → [MuratZrl.github.io/web-dev.html](https://MuratZrl.github.io/web-dev.html)
 
 ## Software Engineering Tier List
 [![SWE Tier List Preview](swe-preview.png)](https://MuratZrl.github.io/swe-tierlist.html)
